@@ -17,7 +17,7 @@ child node
 
 
 # update the hostname
-* nano /etc/hostname
+* nano /etc/hosts
 
 # set a static ip address
 * nano /etc/network/interfaces
