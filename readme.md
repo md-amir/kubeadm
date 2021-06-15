@@ -21,6 +21,7 @@ child node
 
 # set a static ip address
 * nano /etc/network/interfaces
-   '''auto enp0s8
-    iface enp0s8 inet static
-    address 192.168.56.101'''
+```auto enp0s8
+iface enp0s8 inet static
+address 192.168.56.101
+```
