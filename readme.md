@@ -52,6 +52,8 @@ add line below
 
 # On master
 * sudo kubeadm init --pod-network-cidr=<> --apiserver-advertise-address=<ip-address-of-master>
+* sudo kubeadm init --pod-network-cidr=192.168.0.0/16 --apiserver-advertise-address=192.168.0.103
+
 //for starting a Calico CNI: 192.168.0.0/16 or for starting a flannel CNI 10.244.0.0/16 
 
 # Run the following command a normal user 
