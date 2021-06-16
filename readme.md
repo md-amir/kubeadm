@@ -37,5 +37,7 @@ address 192.168.56.101
 cat <<EOF >/etc/apt/sources.list.d/kubernetes.list  
 > deb http://apt.kubernetes.io/ kubernetes-xenial main
 > EOF
+```
  
- 
+ # Install keubeadm, kubelet & kubectl
+ * install -y kubelet kubeadm kubectl
