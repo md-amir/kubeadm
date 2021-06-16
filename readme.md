@@ -52,6 +52,19 @@ add line below
 
 # On master
 * sudo kubeadm init --pod-network-cidr=<> --apiserver-advertise-address=<ip-address-of-master>
+//for starting a Calico CNI: 192.168.0.0/16 or for starting a flannel CNI 10.244.0.0/16 
+
+# Run the following command a normal user 
+* mkdir -p $HOME/.kube
+* sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+* sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+# Some commont kubectl commands
+
+* kubectl get nodes // status of Nodes
+* kubectl get pods --all-namespaces // status of pods
+* kubectl get -o wide pods --all-namespaces // Detailed status of PODS
+
 
 
 
