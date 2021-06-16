@@ -17,7 +17,7 @@ child node
 
 
 # update the hostname
-* nano /etc/hosts
+* nano /etc/hostname
 
 # set a static ip address
 * nano /etc/network/interfaces
@@ -39,5 +39,14 @@ cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
 > EOF
 ```
  
- # Install keubeadm, kubelet & kubectl
- * install -y kubelet kubeadm kubectl
+# Install keubeadm, kubelet & kubectl
+* install -y kubelet kubeadm kubectl
+
+# Update the kubernetes configuration
+* nano /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+
+
+add line below
+>Environment="cgroup-driver=systemd/cgroup-driver=cgroupfs"
+
+
