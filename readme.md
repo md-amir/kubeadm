@@ -34,6 +34,7 @@ address 192.168.56.101
 # Run following commands before installing Kube environments
 
 ``` 
+apt-get update && apt-get install -y apt-transport-https curl 
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 cat <<EOF >/etc/apt/sources.list.d/kubernetes.list  
 > deb http://apt.kubernetes.io/ kubernetes-xenial main
