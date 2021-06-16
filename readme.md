@@ -72,8 +72,10 @@ Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
 Then you can join any number of worker nodes by running the following on each as root:
 
 ```kubeadm join 192.168.1.23:6443 --token 6nkbau.r4h0xwavszviwohi \
-	--discovery-token-ca-cert-hash sha256:02cd68ea1e9a5748d045fbcb0c9ab1aaaed4b3fa2d39c7e3d6872861158f6319 ```
+	--discovery-token-ca-cert-hash sha256:02cd68ea1e9a5748d045fbcb0c9ab1aaaed4b3fa2d39c7e3d6872861158f6319 
+```
 
+	
 # Some commont kubectl commands
 
 * kubectl get nodes // status of Nodes
@@ -81,6 +83,7 @@ Then you can join any number of worker nodes by running the following on each as
 * kubectl get -o wide pods --all-namespaces // Detailed status of PODS
 
 # For creating a POD based on Calico 
+* https://docs.projectcalico.org/getting-started/kubernetes/quickstart
 * kubectl apply -f https://docs.projectcalico.org/v3.0/getting-started/kubernetes/installation/hosted/kubeadm/1.7/calico.yaml
 
 
