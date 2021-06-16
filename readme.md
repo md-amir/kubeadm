@@ -40,7 +40,7 @@ cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
 ```
  
 # Install keubeadm, kubelet & kubectl
-* install -y kubelet kubeadm kubectl
+* apt-get install -y kubelet kubeadm kubectl
 
 # Update the kubernetes configuration
 * nano /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
