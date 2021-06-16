@@ -84,7 +84,6 @@ Then you can join any number of worker nodes by running the following on each as
 
 # For creating a POD based on Calico 
 * https://docs.projectcalico.org/getting-started/kubernetes/quickstart
-* kubectl apply -f https://docs.projectcalico.org/v3.0/getting-started/kubernetes/installation/hosted/kubeadm/1.7/calico.yaml
-
+* kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
 
 
