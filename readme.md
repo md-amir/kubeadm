@@ -91,3 +91,14 @@ Then you can join any number of worker nodes by running the following on each as
 
 # You can access Dashboard using the kubectl command-line tool by running the following command:
  > kubectl proxy
+
+# creating service account for your Dashboard
+* kubectl create serviceaccount dashboard -n default
+
+# To add cluster binding rules for your roles on dahshboard
+* kubectl create clusterrolebinding dashboard-admin -n default \
+  --clusterrole=cluster-admin \
+  --serviceaccount=default:dashboard
+
+  # To get the secret key ot be pasted into the dashboard token pwd. Copy the outcoming secret key
+  * kubectl -n kubernetes-dashboard get secret $(kubectl -n kubernetes-dashboard get sa/admin-user -o jsonpath="{.secrets[0].name}") -o go-template="{{.data.token | base64decode}}"
