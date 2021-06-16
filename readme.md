@@ -40,7 +40,7 @@ cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
 ```
  
 # Install keubeadm, kubelet & kubectl
-* install -y kubelet kubeadm kubectl
+* apt-get install -y kubelet kubeadm kubectl
 
 # Update the kubernetes configuration
 * nano /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
@@ -52,12 +52,15 @@ add line below
 
 # On master
 * sudo kubeadm init --pod-network-cidr=<> --apiserver-advertise-address=<ip-address-of-master>
+* sudo kubeadm init --pod-network-cidr=192.168.0.0/16 --apiserver-advertise-address=192.168.0.103
+
 //for starting a Calico CNI: 192.168.0.0/16 or for starting a flannel CNI 10.244.0.0/16 
 
 # Run the following command a normal user 
 To start using your cluster, you need to run the following as a regular user:
 
-```  mkdir -p $HOME/.kube
+```  
+  mkdir -p $HOME/.kube
   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
   sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
