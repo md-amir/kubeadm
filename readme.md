@@ -33,12 +33,14 @@ address 192.168.56.101
 
 # Run following commands before installing Kube environments
 
-``` curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+``` 
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 cat <<EOF >/etc/apt/sources.list.d/kubernetes.list  
 > deb http://apt.kubernetes.io/ kubernetes-xenial main
 > EOF
 ```
- 
+ # Install OpenSSH server
+ sudo apt-get install openssh-server
 # Install keubeadm, kubelet & kubectl
 * apt-get install -y kubelet kubeadm kubectl
 
@@ -104,4 +106,6 @@ Then you can join any number of worker nodes by running the following on each as
   --serviceaccount=default:dashboard
 
   # To get the secret key ot be pasted into the dashboard token pwd. Copy the outcoming secret key
-  * kubectl -n kubernetes-dashboard get secret $(kubectl -n kubernetes-dashboard get sa/admin-user -o jsonpath="{.secrets[0].name}") -o go-template="{{.data.token | base64decode}}"
+  * kubectl  get secret $(kubectl get serviceaccount dashboard -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token | base64decode}"
+
+  kubectl get secret $(kubectl get serviceaccount dashboard -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token}" | base64 --decode
