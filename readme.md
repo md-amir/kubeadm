@@ -50,3 +50,8 @@ add line below
 >Environment="cgroup-driver=systemd/cgroup-driver=cgroupfs"
 
 
+# On master
+* sudo kubeadm init --pod-network-cidr=<> --apiserver-advertise-address=<ip-address-of-master>
+
+
+
