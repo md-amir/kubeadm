@@ -86,4 +86,8 @@ Then you can join any number of worker nodes by running the following on each as
 * https://docs.projectcalico.org/getting-started/kubernetes/quickstart
 * kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
 
+# Install dashboard
+* kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.2.0/aio/deploy/recommended.yaml
 
+# You can access Dashboard using the kubectl command-line tool by running the following command:
+ > kubectl proxy
