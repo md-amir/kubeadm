@@ -110,3 +110,6 @@ Then you can join any number of worker nodes by running the following on each as
   * kubectl  get secret $(kubectl get serviceaccount dashboard -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token | base64decode}"
 
   kubectl get secret $(kubectl get serviceaccount dashboard -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token}" | base64 --decode
+
+# virtual box gust disk for resizing ubuntu os screenshot
+sudo apt install build-essential dkms linux-headers-$(uname -r)
