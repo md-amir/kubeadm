@@ -98,7 +98,7 @@ Then you can join any number of worker nodes by running the following on each as
 # You can access Dashboard using the kubectl command-line tool by running the following command:
  > kubectl proxy
 	
-# port forwarding to access dashboard from outside
+# port forwarding to access dashboard from outside (https://www.edureka.co/community/31282/is-accessing-kubernetes-dashboard-remotely-possible)
 	creating an ssh tunnel. 
 	* ssh -L 9999:127.0.0.1:8001 -N <username>@<kubernetes-dashboard-host>
 	* ssh -L 9999:127.0.0.1:8001 -N kubemaster@192.168.0.100
