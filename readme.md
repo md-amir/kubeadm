@@ -14,6 +14,7 @@ child node
 # turn off swap space
 * swapoff -a
 * nano /etc/fstab
+  Inside this file, comment out the /swapfile line.
 
 
 # update the hostname
