@@ -83,7 +83,7 @@ Then you can join any number of worker nodes by running the following on each as
 ```
 
 	
-# Some commont kubectl commands
+# Some common kubectl commands
 
 * kubectl get nodes // status of Nodes
 * kubectl get pods --all-namespaces // status of pods
