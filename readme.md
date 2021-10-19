@@ -24,6 +24,7 @@ address 192.168.56.101
 ```
 
 # Install docker
+* https://docs.docker.com/engine/install/ubuntu/
 
 # Run following commands before installing Kube environments
 
