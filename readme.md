@@ -1,4 +1,4 @@
-# Install Docker Kubernetes
+# Install Docker & Kubernetes
 
 # Update repositories
 * sudo su 
