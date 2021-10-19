@@ -30,7 +30,7 @@ iface enp0s8 inet static
 address 192.168.56.101
 ```
 
-# install docker
+# Install docker
 
 # Run following commands before installing Kube environments
 
