@@ -41,9 +41,11 @@ cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
 > deb http://apt.kubernetes.io/ kubernetes-xenial main
 > EOF
 ```
- # Install OpenSSH server
- sudo apt-get install openssh-server
- sudo systemctl status ssh
+
+# Install OpenSSH server
+*sudo apt-get install openssh-server
+*sudo systemctl status ssh
+
 # Install keubeadm, kubelet & kubectl
 * apt-get install -y kubelet kubeadm kubectl
 
