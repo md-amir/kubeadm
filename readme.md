@@ -1,23 +1,16 @@
-Install Kubernetes
+#Install Docker Kubernetes
 
-master node
-child node
-
-
-# commands
-
-
-# update repositories
+# Update repositories
 * sudo su 
 * apt-get update 
  
-# turn off swap space
+# Turn off swap space
 * swapoff -a
 * nano /etc/fstab
   Inside this file, comment out the /swapfile line.
 
 
-# update the hostname
+# Update the hostname
 * nano /etc/hostname
 
 # set a static ip address
