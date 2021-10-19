@@ -122,3 +122,9 @@ sudo apt install build-essential dkms linux-headers-$(uname -r)
 	
 # Docker delete all images	
 	* docker system prune -a
+# Uninstall kubernetes (kubeadm)
+	https://stackoverflow.com/questions/44698283/how-to-completely-uninstall-kubernetes
+	kubeadm reset
+        sudo apt-get purge kubeadm kubectl kubelet kubernetes-cni kube*   
+        sudo apt-get autoremove  
+        sudo rm -rf ~/.kube
