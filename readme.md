@@ -119,3 +119,6 @@ Then you can join any number of worker nodes by running the following on each as
 
 # virtual box gust disk for resizing ubuntu os screenshot
 sudo apt install build-essential dkms linux-headers-$(uname -r)
+	
+# Docker delete all images	
+	* docker system prune -a
