@@ -43,6 +43,7 @@ cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
 ```
  # Install OpenSSH server
  sudo apt-get install openssh-server
+ sudo systemctl status ssh
 # Install keubeadm, kubelet & kubectl
 * apt-get install -y kubelet kubeadm kubectl
 
