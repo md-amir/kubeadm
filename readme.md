@@ -111,11 +111,14 @@ Then you can join any number of worker nodes by running the following on each as
 * kubectl create clusterrolebinding dashboard-admin -n default \
   --clusterrole=cluster-admin \
   --serviceaccount=default:dashboard
+	
+	
 
-  # To get the secret key ot be pasted into the dashboard token pwd. Copy the outcoming secret key
+
+# To get the secret key ot be pasted into the dashboard token pwd. Copy the outcoming secret key
   * kubectl  get secret $(kubectl get serviceaccount dashboard -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token | base64decode}"
 
-  kubectl get secret $(kubectl get serviceaccount dashboard -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token}" | base64 --decode
+    kubectl get secret $(kubectl get serviceaccount dashboard -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token}" | base64 --decode
 
 # virtual box gust disk for resizing ubuntu os screenshot
 sudo apt install build-essential dkms linux-headers-$(uname -r)
@@ -128,3 +131,8 @@ sudo apt install build-essential dkms linux-headers-$(uname -r)
         sudo apt-get purge kubeadm kubectl kubelet kubernetes-cni kube*   
         sudo apt-get autoremove  
         sudo rm -rf ~/.kube
+# Building, image creating , tagging and pushing to docker hub
+	gradle build (for creating department-service.jar under /build/lib directory)
+	sudo docker build --build-arg JAR_FILE=build/libs/\*.jar -t department-service . 
+        sudo docker tag user-service:latest amirdoc/user-service:latest 
+        sudo docker push amirdoc/user-service
