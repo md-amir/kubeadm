@@ -141,3 +141,5 @@ sudo apt install build-essential dkms linux-headers-$(uname -r)
 # Metallb 
 	https://metallb.universe.tf/installation/
 	https://www.youtube.com/watch?v=xYiYIjlAgHY
+# Weave scope
+	https://www.weave.works/docs/scope/latest/installing/#k8s
