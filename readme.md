@@ -119,6 +119,7 @@ Then you can join any number of worker nodes by running the following on each as
   * kubectl  get secret $(kubectl get serviceaccount dashboard -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token | base64decode}"
 
     kubectl get secret $(kubectl get serviceaccount dashboard -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token}" | base64 --decode
+	
 
 # virtual box gust disk for resizing ubuntu os screenshot
 sudo apt install build-essential dkms linux-headers-$(uname -r)
@@ -136,3 +137,7 @@ sudo apt install build-essential dkms linux-headers-$(uname -r)
 	sudo docker build --build-arg JAR_FILE=build/libs/\*.jar -t department-service . 
         sudo docker tag user-service:latest amirdoc/user-service:latest 
         sudo docker push amirdoc/user-service
+
+# Metallb 
+	https://metallb.universe.tf/installation/
+	https://www.youtube.com/watch?v=xYiYIjlAgHY
