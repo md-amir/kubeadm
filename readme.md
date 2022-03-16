@@ -115,7 +115,7 @@ Then you can join any number of worker nodes by running the following on each as
 	
 
 
-# To get the secret key ot be pasted into the dashboard token pwd. Copy the outcoming secret key
+# To get the secret key to be pasted into the dashboard token pwd. Copy the outcoming secret key
   * kubectl  get secret $(kubectl get serviceaccount dashboard -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token | base64decode}"
 
     kubectl get secret $(kubectl get serviceaccount dashboard -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token}" | base64 --decode
